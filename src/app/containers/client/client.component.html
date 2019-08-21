@@ -1,0 +1,31 @@
+<mat-toolbar
+  ><a href="javascript:void(0)" (click)="navigateBack()">
+    <mat-icon>arrow_back</mat-icon>
+  </a></mat-toolbar
+>
+
+<mat-tab-group>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="tab-icon">person</mat-icon>
+      Client Details
+    </ng-template>
+    <app-client-details [client]="client$ | async"></app-client-details>
+  </mat-tab>
+
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="tab-icon">healing</mat-icon>
+      Patients
+    </ng-template>
+    <app-patient-list [clientId]="(client$ | async)?.id"></app-patient-list>
+  </mat-tab>
+
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="tab-icon">attach_money</mat-icon>
+      Invoices
+    </ng-template>
+    <app-invoice-list [clientId]="(client$ | async)?.id"></app-invoice-list>
+  </mat-tab>
+</mat-tab-group>

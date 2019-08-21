@@ -1,0 +1,173 @@
+{
+    "id": "mockoon_export",
+    "appVersion": "1.4.0",
+    "checksum": "b84447085a1b6dbcd9465737757d8ba3",
+    "subject": "environment",
+    "data": {
+        "uuid": "72bb5c50-c204-11e9-bb53-9515114a8028",
+        "name": "Assignment",
+        "endpointPrefix": "",
+        "latency": 0,
+        "port": 3000,
+        "routes": [
+            {
+                "uuid": "72bb5c51-c204-11e9-bb53-9515114a8028",
+                "documentation": "all clients",
+                "method": "get",
+                "endpoint": "clients",
+                "body": "{ \"clients\":\n    [{\n        \"id\": \"1\",\n        \"firstName\":\"John\",\n        \"lastName\": \"Doe\",\n        \"title\": \"Mr\",\n        \"initials\": \"JD\",\n        \"address\": {\n            \"street\": \"Long 1233\",\n            \"city\": \"Los Angeles\",\n            \"zip\": \"90210\"\n        },\n        \"startDate\": \"22-05-2005\",\n        \"active\": true\n    },\n    {\n        \"id\": \"2\",\n        \"firstName\":\"Pete\",\n        \"lastName\": \"Smith\",\n        \"title\": \"\",\n        \"initials\": \"PS\",\n        \"address\": {\n            \"street\": \"Short 9\",\n            \"city\": \"Johanesburg\",\n            \"zip\": \"123456\"\n        },\n        \"startDate\": \"02-02-2010\",\n        \"active\": true\n    },\n    {\n        \"id\": \"3\",\n        \"firstName\":\"\",\n        \"lastName\": \"Johnson\",\n        \"title\": \"Mrs\",\n        \"initials\": \"\",\n        \"address\": {\n            \"street\": \"Stationstraat 3\",\n            \"city\": \"Amsterdam\",\n            \"zip\": \"1055VT\"\n        },\n        \"startDate\": \"12-04-2009\",\n        \"active\": true\n    },\n    {\n        \"id\": \"4\",\n        \"firstName\":\"Eva\",\n        \"lastName\": \"Smit\",\n        \"title\": \"Miss\",\n        \"initials\": \"ES\",\n        \"address\": {\n            \"street\": \"Verzetstraat 1\",\n            \"city\": \"Hoofddorp\",\n            \"zip\": \"2132EV\"\n        },\n        \"startDate\": \"05-05-2007\",\n        \"active\": true\n    },\n    {\n        \"id\": \"5\",\n        \"firstName\":\"Jake\",\n        \"lastName\": \"Pitt\",\n        \"title\": \"\",\n        \"initials\": \"JP\",\n        \"address\": {\n            \"street\": \"Middelweg 50\",\n            \"city\": \"Haarlem\",\n            \"zip\": \"1962AZ\"\n        },\n        \"startDate\": \"22-02-2015\",\n        \"active\": true\n    }]\n}\n",
+                "latency": 0,
+                "statusCode": "200",
+                "headers": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false
+            },
+            {
+                "uuid": "72bb5c52-c204-11e9-bb53-9515114a8028",
+                "documentation": "client by id",
+                "method": "get",
+                "endpoint": "clients/1",
+                "body": "{ \"client\":\n    {\n        \"id\": \"1\",\n        \"firstName\":\"John\",\n        \"lastName\": \"Doe\",\n        \"title\": \"Mr\",\n        \"initials\": \"JD\",\n        \"address\": {\n            \"street\": \"Long 1233\",\n            \"city\": \"Los Angeles\",\n            \"zip\": \"90210\"\n        },\n        \"phone\": \"0123-456789\",\n        \"business\": \"false\",\n        \"iban\": \"NL47RABO0123456789\",\n        \"startDate\": \"22-05-2005\",\n        \"active\": true\n    }\n}",
+                "latency": 0,
+                "statusCode": "200",
+                "headers": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false
+            },
+            {
+                "uuid": "72bb5c53-c204-11e9-bb53-9515114a8028",
+                "documentation": "patients for client with specified id",
+                "method": "get",
+                "endpoint": "patients/client/1",
+                "body": "{\n    \"patients\": \n    [{\n      \"id\": \"1\",\n      \"name\": \"Woef\",\n      \"class\": \"Mammal\",\n      \"species\": \"Canine\",\n      \"dateOfBirth\": \"22-01-2010\",\n        \"active\": true\n    },{\n      \"id\": \"2\",\n      \"name\": \"Miauw\",\n      \"class\": \"Mammal\",\n      \"species\": \"Feline\",\n      \"dateOfBirth\": \"12-10-2015\",\n        \"active\": true\n    },{\n      \"id\": \"3\",\n      \"name\": \"Moo\",\n      \"class\": \"Mammal\",\n      \"species\": \"Cow\",\n      \"dateOfBirth\": \"10-10-2013\",\n        \"active\": false\n    }]\n}",
+                "latency": 0,
+                "statusCode": "200",
+                "headers": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false
+            },
+            {
+                "uuid": "72bb5c54-c204-11e9-bb53-9515114a8028",
+                "documentation": "patient by id",
+                "method": "get",
+                "endpoint": "patients/1",
+                "body": "{\n    \"patient\": \n    {\n        \"id\": \"1\",\n        \"name\": \"Woef\",\n        \"class\": \"Mammal\",\n        \"species\": \"Canine\",\n        \"dateOfBirth\": \"22-01-2010\",\n        \"crossBreed\": false,\n        \"gender\": \"male\",\n        \"warning\": \"Alergic to cats\",\n        \"remarks\": \"Barks\",\n        \"colour\": \"black\",\n        \"active\": true\n    }\n}",
+                "latency": 0,
+                "statusCode": "200",
+                "headers": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false
+            },
+            {
+                "uuid": "72bb5c55-c204-11e9-bb53-9515114a8028",
+                "documentation": "weights for patient 1",
+                "method": "get",
+                "endpoint": "weights/patient/1",
+                "body": "{\n    \"weights\": \n    [{\n        \"id\":\"1\",\n        \"weight\":\"10\",\n        \"unit\": \"kg\",\n        \"date\": \"22-10-2002\",\n        \"patientId\": \"1\"\n    },{\n        \"id\":\"2\",\n        \"weight\":\"11\",\n        \"unit\": \"kg\",\n        \"date\": \"22-10-2004\",\n        \"patientId\": \"1\"\n    },{\n        \"id\":\"3\",\n        \"weight\":\"13\",\n        \"unit\": \"kg\",\n        \"date\": \"22-10-2005\",\n        \"patientId\": \"1\"\n    },{\n        \"id\":\"4\",\n        \"weight\":\"15\",\n        \"unit\": \"kg\",\n        \"date\": \"22-10-2006\",\n        \"patientId\": \"1\"\n    },{\n        \"id\":\"5\",\n        \"weight\":\"13\",\n        \"unit\": \"kg\",\n        \"date\": \"22-10-2007\",\n        \"patientId\": \"1\"\n    },{\n        \"id\":\"6\",\n        \"weight\":\"12.5\",\n        \"unit\": \"kg\",\n        \"date\": \"22-10-2010\",\n        \"patientId\": \"1\"\n    }]\n}",
+                "latency": 0,
+                "statusCode": "200",
+                "headers": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false
+            },
+            {
+                "uuid": "72bb5c56-c204-11e9-bb53-9515114a8028",
+                "documentation": "products for patient 1",
+                "method": "get",
+                "endpoint": "products/patient/1",
+                "body": "{\n    \"products\": \n    [{\n        \"id\":\"5\",\n        \"name\": \"Paracetamol\",\n        \"quantity\": \"1\",\n        \"packaging\": \"20 pills box\",\n        \"dosage\": \"1 per day\",\n        \"date\": \"15-05-2018\",\n        \"remarks\": \"As needed\",\n        \"patientId\": \"1\"\n    },{\n        \"id\":\"6\",\n        \"name\": \"Hills diet food for dogs\",\n        \"quantity\": \"1\",\n        \"packaging\": \"15kg bag\",\n        \"dosage\": \"200g twice a day\",\n        \"date\": \"10-03-2005\",\n        \"remarks\": \"Diet\",\n        \"patientId\": \"1\"\n    },{\n        \"id\":\"7\",\n        \"name\": \"Bandage\",\n        \"quantity\": \"2\",\n        \"packaging\": \"Roll of 5m\",\n        \"dosage\": \"NA\",\n        \"date\": \"01-01-2015\",\n        \"remarks\": \"\",\n        \"patientId\": \"1\"\n    },{\n        \"id\":\"8\",\n        \"name\": \"Toothbrush\",\n        \"quantity\": \"1\",\n        \"packaging\": \"Box of 2\",\n        \"dosage\": \"NA\",\n        \"date\": \"20-11-2009\",\n        \"remarks\": \"Once a week\",\n        \"patientId\": \"1\"\n    }]\n}",
+                "latency": 0,
+                "statusCode": "200",
+                "headers": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false
+            },
+            {
+                "uuid": "72bb5c57-c204-11e9-bb53-9515114a8028",
+                "documentation": "calls for patient 1",
+                "method": "get",
+                "endpoint": "calls/patient/1",
+                "body": "{\n    \"calls\": \n    [{\n        \"id\":\"5\",\n        \"date\": \"26-04-2011\",\n        \"subject\": \"Vaccination reminder\",\n        \"patientId\": \"1\"\n    },{\n        \"id\":\"3\",\n        \"date\": \"12-02-2014\",\n        \"subject\": \"Called about our special offer - fitness for dogs\",\n        \"patientId\": \"1\"\n    },{\n        \"id\":\"7\",\n        \"date\": \"22-01-2015\",\n        \"subject\": \"Called to wish the patient happy birthday\",\n        \"patientId\": \"1\"\n    }]\n}",
+                "latency": 0,
+                "statusCode": "200",
+                "headers": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false
+            },
+            {
+                "uuid": "72bb5c58-c204-11e9-bb53-9515114a8028",
+                "documentation": "invoices for client 1",
+                "method": "get",
+                "endpoint": "invoices/client/1",
+                "body": "{\n    \"invoices\": \n    [{\n        \"id\": \"9\",\n        \"number\": \"INV-23\",\n        \"amount\": \"130.5\",\n        \"vat\": \"15.2\",\n        \"clientId\": \"1\",\n        \"patientId\": \"1\",\n        \"date\": \"10-03-2005\"\n    },{\n        \"id\": \"8\",\n        \"number\": \"INV-25\",\n        \"amount\": \"15\",\n        \"vat\": \"1.5\",\n        \"clientId\": \"1\",\n        \"patientId\": \"\",\n        \"date\": \"15-06-2010\"\n    },{\n        \"id\": \"7\",\n        \"number\": \"INV-01\",\n        \"amount\": \"61.25\",\n        \"vat\": \"12.6\",\n        \"clientId\": \"1\",\n        \"patientId\": \"1\",\n        \"date\": \"20-11-2009\"\n    },{\n        \"id\": \"6\",\n        \"number\": \"INV-255\",\n        \"amount\": \"15.15\",\n        \"vat\": \"1.5\",\n        \"clientId\": \"1\",\n        \"patientId\": \"\",\n        \"date\": \"03-05-2009\"\n    },{\n        \"id\": \"15\",\n        \"number\": \"INV-16\",\n        \"amount\": \"1.25\",\n        \"vat\": \".25\",\n        \"clientId\": \"1\",\n        \"patientId\": \"1\",\n        \"date\": \"15-05-2018\"\n    }]\n}",
+                "latency": 0,
+                "statusCode": "200",
+                "headers": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false
+            }
+        ],
+        "proxyMode": false,
+        "proxyHost": "",
+        "https": false,
+        "cors": false,
+        "headers": [
+            {
+                "key": "",
+                "value": ""
+            },
+            {
+                "key": "Access-Control-Allow-Origin",
+                "value": "*"
+            },
+            {
+                "key": "Access-Control-Allow-Methods",
+                "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+            },
+            {
+                "key": "Access-Control-Allow-Headers",
+                "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+            }
+        ]
+    }
+}

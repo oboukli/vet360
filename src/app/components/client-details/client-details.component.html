@@ -1,0 +1,42 @@
+<dl *ngIf="client">
+  <dt>Title</dt>
+  <dd>{{ client.title }}</dd>
+
+  <dt>First Name</dt>
+  <dd>{{ client.firstName }}</dd>
+
+  <dt>Last Name</dt>
+  <dd>{{ client.lastName }}</dd>
+
+  <dt>Initials</dt>
+  <dd>{{ client.initials }}</dd>
+
+  <dt>Phone</dt>
+  <dd>{{ client.phone }}</dd>
+
+  <dt>IBAN</dt>
+  <dd>{{ client.iban }}</dd>
+
+  <dt>Start Date</dt>
+  <dd>{{ client.startDate }}</dd>
+
+  <dt>Address</dt>
+  <dd>
+    <dl>
+      <dt>Street</dt>
+      <dd>{{ client.address.street }}</dd>
+
+      <dt>City</dt>
+      <dd>{{ client.address.city }}</dd>
+
+      <dt>Zip</dt>
+      <dd>{{ client.address.zip }}</dd>
+    </dl>
+  </dd>
+
+  <dt>Business</dt>
+  <dd>{{ client.business }}</dd>
+
+  <dt>Active</dt>
+  <dd>{{ client.business }}</dd>
+</dl>

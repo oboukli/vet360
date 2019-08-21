@@ -1,0 +1,17 @@
+dl {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+dt {
+  flex-basis: 20%;
+  padding: 0.25em;
+  font-weight: bold;
+}
+
+dd {
+  flex-basis: 70%;
+  flex-grow: 1;
+  margin: 0;
+  padding: 0.25em;
+}
